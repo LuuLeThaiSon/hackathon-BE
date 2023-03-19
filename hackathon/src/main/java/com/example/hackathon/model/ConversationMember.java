@@ -1,10 +1,11 @@
 package com.example.hackathon.model;
-import lombok.AllArgsConstructor;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 @Entity
 @Table
 @Data
@@ -19,5 +20,5 @@ public class ConversationMember {
     private Conversation conversation;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User users;
 }
